@@ -243,9 +243,9 @@ dotnet_diagnostic.IDE0075.severity = warning
 csharp_style_namespace_declarations = file_scoped
 #------------------ Severity -------------------#
 # IDE0160: Use block-scoped namespace
-dotnet_diagnostic.IDE0029.severity = warning
+dotnet_diagnostic.IDE0160.severity = warning
 # IDE0161: 	Use file-scoped namespace
-dotnet_diagnostic.IDE0030.severity = warning
+dotnet_diagnostic.IDE0161.severity = warning
 #=================================================================================================#
 
 #=================================== Null-checking preferences ===================================#
