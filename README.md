@@ -1,2 +1,3 @@
-# golf-scorecard
-A simple scorecard application to track you round on the course.
+# Golf Scorecard
+
+A simple scorecard application to track your round on the course.
