@@ -1,0 +1,45 @@
+# This file assigns Git attributes to specified pathnames.
+# Each line has the form: `pattern attr1 attr2 ...`
+# If multiple patterns match the path, a later line overrides an earlier line.
+
+# Common Attribute Information:
+#
+# |================================================================================================|
+# | Attribute | Description                                                                        |
+# |================================================================================================|
+# | text      | - Enables end-of-line normalization and marks the path as a text file.
+# |           | - End-of-line conversion takes place without guessing the content type.
+# |-----------|------------------------------------------------------------------------------------|
+# | binary    | - Disables end-of-line normalization.
+# |           | - Turns off diffs for the file (Helps avoid tryiing to view a diff of binary)
+# |           | - Disables automerge of the file (Helps avoid hard to handle merge conflicts by
+# |           |   marking the file as conflicted without listing all the individual conflicts)
+# |-----------|------------------------------------------------------------------------------------|
+# | eol       | - Sets a specific line-ending style to be used in the working directory.
+# |           | - Enables end-of-line conversions without any content checks.
+# |-----------|------------------------------------------------------------------------------------|
+# | diff      | - Affects how Git generates diffs for particular files.
+# |================================================================================================|
+#
+# More info: https://git-scm.com/docs/gitattributes
+
+# ------------------
+# General settings |
+# ------------------
+# Set default behaviour to automatically normalize line endings of text files.
+*                 text=auto
+
+# ----------------------------------------------------------------------
+# Specify the line endings for files that should have a specific style |
+# ----------------------------------------------------------------------
+# Checkout with LS
+*.bash            text eol=lf
+*.sh              text eol=lf
+*.fish            text eol=lf
+*.zsh             text eol=lf
+# Checkout with CRLF
+*.bat             text eol=crlf
+*.cmd             text eol=crlf
+*.ps1             text eol=crlf
+*.sln             text eol=crlf
+*.csproj          text eol=crlf
